@@ -14,7 +14,7 @@ scanner.on("end", devices => {
     for (const key in devices) {
       if (devices.hasOwnProperty(key)) {
         if (!devices[key].find(port => port === 554)) {
-          console.log(device);
+          console.log(devices[key]);
         }
       }
     }
