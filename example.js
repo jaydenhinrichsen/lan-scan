@@ -15,4 +15,5 @@ scanner.on("end", devices => {
       console.log(device);
     }
   });
+  console.log(devices);
 });
