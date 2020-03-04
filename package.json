@@ -1,0 +1,26 @@
+{
+  "name": "lan-scan",
+  "version": "1.0.0",
+  "description": "Scan for devices in a local area network",
+  "main": "server.js",
+  "scripts": {
+    "example": "node example.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaydenhinrichsen/lan-scan.git"
+  },
+  "keywords": [
+    "lan",
+    "scan",
+    "lan-scan",
+    "network",
+    "scanner"
+  ],
+  "author": "Jayden Hinrichsen",
+  "license": "GNU General Public License v2.0",
+  "bugs": {
+    "url": "https://github.com/jaydenhinrichsen/lan-scan/issues"
+  },
+  "homepage": "https://github.com/jaydenhinrichsen/lan-scan#readme"
+}
