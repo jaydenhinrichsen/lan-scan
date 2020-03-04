@@ -10,10 +10,12 @@ setInterval(() => {
 }, 4000);
 
 scanner.on("end", devices => {
-  devices.forEach(device => {
-    if (!device.find(port => port === 554)) {
-      console.log(device);
-    }
-  });
+  if (devices) {
+    devices.forEach(device => {
+      if (!device.find(port => port === 554)) {
+        console.log(device);
+      }
+    });
+  }
   console.log(devices);
 });
