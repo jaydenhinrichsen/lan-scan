@@ -1,7 +1,7 @@
 const Scanner = require("./index.js");
 const scanner = new Scanner({
-  ip: "192.168.1", // Required
-  ports: [80, 21, 22, 554, 5084, 443, 25, 23, 3389], // Required
+  ip: "192.168.43", // Required
+  ports: [80, 21, 22, 554], // Required
   timeout: 2000 // Optional
 });
 
