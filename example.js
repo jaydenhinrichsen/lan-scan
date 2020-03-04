@@ -11,7 +11,7 @@ setInterval(() => {
 
 scanner.on("end", devices => {
   if (devices) {
-    for (const key in device) {
+    for (const key in devices) {
       if (device.hasOwnProperty(key)) {
         if (!devices[key].find(port => port === 554)) {
           console.log(device);
