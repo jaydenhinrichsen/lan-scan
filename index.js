@@ -7,25 +7,24 @@ class Scanner extends EventEmitter {
     this.ip = ip || undefined;
     this.timeout = timeout || 1000;
     this.ports = ports || undefined;
+    this.scanInterval = null;
+    this.devices = undefined;
   }
 
   /**
    * @public
-   * @description Start the scanner. If interval is specified, run this._scan() every interval
-   * @param {Number} interval
+   * @description Start the scanner
    */
-  start(interval) {
+  scan() {
     if (this.ip) {
-      if (interval) {
-        setInterval(() => {
-          this._scan();
-        }, interval);
-      } else {
-        this._scan();
-      }
+      this._scan();
     } else {
       throw new Error("Please specify a base IP address.");
     }
+  }
+
+  stop() {
+    clearInterval(this.scanInterval);
   }
 
   /**
@@ -43,6 +42,11 @@ class Scanner extends EventEmitter {
       } else {
         throw new Error("Please specify a list of ports to check.");
       }
+    }
+
+    if (this.devices) {
+      this.emit("end", this.devices);
+      this.devices = {};
     }
   }
 
@@ -73,6 +77,15 @@ class Scanner extends EventEmitter {
    */
   _handleConnect(socket, port, host) {
     this.emit("device", { port, host });
+    if (!this.devices) {
+      this.devices = {};
+    }
+
+    if (this.devices[host]) {
+      this.devices[host].push(port);
+    } else {
+      this.devices[host] = [port];
+    }
     socket.end();
   }
 
