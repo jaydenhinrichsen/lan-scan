@@ -1,4 +1,4 @@
-const Scanner = require("./lan-scan");
+const Scanner = require("./index.js");
 const scanner = new Scanner({
   ip: "192.168.1", // Required
   ports: [80, 21, 22, 554, 5084, 443, 25, 23, 3389], // Required
