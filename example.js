@@ -11,11 +11,13 @@ setInterval(() => {
 
 scanner.on("end", devices => {
   if (devices) {
-    devices.forEach(device => {
-      if (!device.find(port => port === 554)) {
-        console.log(device);
+    for (const key in device) {
+      if (device.hasOwnProperty(key)) {
+        if (!devices[key].find(port => port === 554)) {
+          console.log(device);
+        }
       }
-    });
+    }
   }
   console.log(devices);
 });
