@@ -15,16 +15,12 @@ class Scanner extends EventEmitter {
    * @public
    * @description Start the scanner
    */
-  scan() {
+  start() {
     if (this.ip) {
       this._scan();
     } else {
       throw new Error("Please specify a base IP address.");
     }
-  }
-
-  stop() {
-    clearInterval(this.scanInterval);
   }
 
   /**
