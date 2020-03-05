@@ -7,7 +7,7 @@ const scanner = new Scanner({
 
 setInterval(() => {
   scanner.start();
-}, 4000);
+}, 1000);
 
 // Discovered devices are emited when the scan finishes
 scanner.on("end", devices => {
