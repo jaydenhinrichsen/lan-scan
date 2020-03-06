@@ -1,5 +1,5 @@
 {
-  "name": "lan-scan",
+  "name": "@jaydenhinrichsen/lan-scan",
   "version": "1.0.0",
   "description": "Scan for devices in a local area network",
   "main": "server.js",
