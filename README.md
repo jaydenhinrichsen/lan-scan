@@ -3,7 +3,7 @@ Scan for devices in a local area network
 
 ## Overview
 The scanner simply attempts to connect to a range of IP addresses on a range of ports and returns any successful connections in the following form:
-``` json
+```
 {
   "192.168.X.XXX": [list of ports where connection was made]
   .
