@@ -13,7 +13,7 @@ The scanner simply attempts to connect to a range of IP addresses on a range of 
 ```
 
 ## Why?
-I needed a way to scan for devices on an Android phone that was running a Node.js server via Termux. The packages I found didn't support Android devices so I decided to create a really implementation. 
+I needed a way to scan for devices on an Android phone that was running a Node.js server via Termux. The packages I found didn't support Android devices so I decided to create a really simple(and honestly not super useful) implementation. 
 
 ## Demo
 ![](lan-scan-demo.gif)
