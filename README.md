@@ -20,7 +20,7 @@ I needed a way to scan for devices on an Android phone that was running a Node.j
 
 ## Bugs & Issues 
 - First scan returns an empty array.
-- Not running asynchronously or with callbacks, so too large of a search size result in a Heap Error, or Call Stack Error.
+- Not running asynchronously or with callbacks, so too large of a search size will result in a Heap Error, or Call Stack Error.
 - Hostname & MAC address is not yet implemented.
 
 
